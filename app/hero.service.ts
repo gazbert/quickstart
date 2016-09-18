@@ -12,7 +12,11 @@ export class HeroService {
     // simulate a slow connection
     getHeroesSlowly(): Promise<Hero[]> {
         return new Promise<Hero[]>(resolve =>
-            setTimeout(resolve, 2000)) // delay 2 seconds
+            setTimeout(resolve, 0)) // delay 1000 = 1 second
             .then(() => this.getHeroes());
+    }
+
+    getHero(id: number): Promise<Hero> {
+        return this.getHeroes().then(heroes => heroes.find(hero => hero.id === id));
     }
 }
