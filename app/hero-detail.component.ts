@@ -1,7 +1,7 @@
-import {Hero} from "./hero";
-import {ActivatedRoute, Params} from "@angular/router";
-import {HeroService} from "./hero.service";
-import {OnInit, Component} from "@angular/core";
+import {Hero} from './hero';
+import {ActivatedRoute, Params} from '@angular/router';
+import {HeroService} from './hero.service';
+import {OnInit, Component} from '@angular/core';
 
 @Component({
     selector: 'my-hero-detail',

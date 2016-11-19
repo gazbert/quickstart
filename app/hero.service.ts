@@ -1,12 +1,13 @@
-import {Injectable} from "@angular/core";
-import {Http, Headers} from "@angular/http";
-import "rxjs/add/operator/toPromise";
-import {Hero} from "./hero";
+import {Injectable} from '@angular/core';
+import {Http, Headers} from '@angular/http';
+import 'rxjs/add/operator/toPromise';
+import {Hero} from './hero';
 
 @Injectable()
 export class HeroService {
 
     private heroesUrl = 'app/heroes';  // URL to web api
+    private headers = new Headers({'Content-Type': 'application/json'});
 
     constructor(private http: Http) {
     }
@@ -33,8 +34,6 @@ export class HeroService {
         console.error('An error occurred', error); // for demo purposes only
         return Promise.reject(error.message || error);
     }
-
-    private headers = new Headers({'Content-Type': 'application/json'});
 
     update(hero: Hero): Promise<Hero> {
         const url = `${this.heroesUrl}/${hero.id}`;
