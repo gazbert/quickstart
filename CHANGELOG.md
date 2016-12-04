@@ -1,8 +1,27 @@
 ## Angular Documentation QuickStart Changelog
-Upgraders: to be sure of a fresh start, consider running these commands 
+Upgraders: for a fresh start, consider running these commands 
 * `git clean -xdf` 
 * `npm install`
-* `npm run webdriver:update`
+
+<a name="0.2.19"></a>
+# 0.2.19 (2016-11-30)
+* remove upgrade mappings from `systemjs.config.js` PR #301
+
+<a name="0.2.18"></a>
+# 0.2.18 (2016-11-30)
+* remove `exclude` clause from `tsconfig.json`; it was just confusing people
+* karma.config + karma-test-shim can handle multiple spec source paths (issue #294)
+* cosmetic `app.component.spec.ts` changes
+* cosmetic `karma.config.js` changes
+
+<a name="0.2.17"></a>
+# 0.2.17 (2016-11-16)
+* Conform to updated QuickStart advice
+  * removed docker everywhere (was nice but not necessary)
+  * removed wallaby
+  * shrink styles.css
+  * refine tsconfig.json
+  * `AppComponent` uses interpolation
 
 <a name="0.2.16"></a>
 # 0.2.16 (2016-11-14)

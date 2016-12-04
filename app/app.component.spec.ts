@@ -1,4 +1,3 @@
-/* tslint:disable:no-unused-variable */
 import { AppComponent } from './app.component';
 
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
@@ -15,6 +14,8 @@ describe('AppComponent', function () {
     TestBed.configureTestingModule({
       declarations: [AppComponent],
       schemas: [NO_ERRORS_SCHEMA]
+    TestBed.configureTestingModule({
+      declarations: [ AppComponent ]
     })
       .compileComponents()
       .then(() => {
